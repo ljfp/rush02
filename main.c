@@ -6,12 +6,13 @@
 /*   By: egalindo <egalindo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 11:17:05 by egalindo          #+#    #+#             */
-/*   Updated: 2025/07/27 15:06:40 by nponcin          ###   ########.fr       */
+/*   Updated: 2025/07/27 16:07:16 by jaires-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
+#include "Rushheader.h"
 
 int		ft_check_args(int argc, char **argv);
 char	*ft_convert_args(int argc, char **argv);

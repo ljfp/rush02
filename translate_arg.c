@@ -6,18 +6,14 @@
 /*   By: nponcin <nponcin@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 21:50:04 by nponcin           #+#    #+#             */
-/*   Updated: 2025/07/27 14:59:59 by nponcin          ###   ########.fr       */
+/*   Updated: 2025/07/27 16:27:15 by jaires-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fcntl.h>
 #include <stdlib.h>
 #include <unistd.h>
-
-char	*ft_extract(char *str);
-int 	chunks(char *str);
-void 	print_num(char *str);
-void 	decompose(char digit1, char digit2, char digit3);
+#include "Rushheader.h" 
 
 int	ft_strlen(char *str)
 {
@@ -34,6 +30,7 @@ int	chunks(char *str)
 	int		i;
 	int		len;
 	int		padding;
+	int		nbr_chnks;
 	char	padded_str[1024];
 
 	i = 0;
@@ -54,9 +51,13 @@ int	chunks(char *str)
 	i = 0;
 	while (i < len)
 	{
-		decompose(str[i], str[i + 1], str[i + 2]);
+		decompose(padded_str[i], padded_str[i + 1], padded_str[i + 2]);
 		if (i + 3 < len)
+		{
 			write(1, " ", 1);
+		/*	nbr_chnks = nbr_chunks(str + i);
+			print_big_units(str + i, nbr_chnks);*/
+		}
 		i += 3;
 	}
 	write(1, "\n", 1);
@@ -95,11 +96,12 @@ void decompose(char d1, char d2, char d3)
 				if (d3 != '0')
 					write(1, "-", 1);
 		}
-		if (d3 != '0' && d2 != '1')
+		if (d3 != '0')
 		{
 			temp[0] = d3;
 			temp[1] = '\0';
 			print_num(temp);
 		}
 	}
+	
 }

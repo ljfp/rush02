@@ -6,7 +6,7 @@
 /*   By: nponcin <nponcin@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 15:48:37 by nponcin           #+#    #+#             */
-/*   Updated: 2025/07/27 15:59:42 by nponcin          ###   ########.fr       */
+/*   Updated: 2025/07/27 16:22:59 by jaires-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	decompose(char d1, char d2, char d3);
 /* print_big_unit.c */
 
 int		nbr_chunks(char *str);
-char	*big_unit(int nbr_chunks);
-void	print_big_units(char *str);
+char	*big_unit(int nbr_chnks);
+void	print_big_units(char *str, int nbr_chnks);
 
 #endif

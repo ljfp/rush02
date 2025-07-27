@@ -6,9 +6,14 @@
 /*   By: jaires-r <jaires-r@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 21:11:51 by jaires-r          #+#    #+#             */
-/*   Updated: 2025/07/27 14:33:37 by nponcin          ###   ########.fr       */
+/*   Updated: 2025/07/27 16:22:50 by jaires-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include "Rushheader.h"
 
 int		nbr_chunks(char *str)
 {
@@ -26,36 +31,34 @@ int		nbr_chunks(char *str)
 	}
 }
 
-char	*big_unit(int nbr_chunks)
+char	*big_unit(int nbr_chnks)
 {
 	int		i;
 	char	*to_find;
 	
-	to_find = (char *) malloc((nbr_chunks + 3) * sizeof(char));
+	to_find = (char *) malloc(3 + nbr_chnks * sizeof(char));
 	if (to_find == NULL)
 		return (NULL);
 	to_find[0] = 1;
 	i = 1;
-	while (i < nbr_chunks + 1)
+	while (i < nbr_chnks + 1)
 	{
 		to_find[i] = '0';
 		i++;
 	}
-	to_find[nbrchunks + 1] = ':';
-	to_find[nbrchunks + 2] = '\0';
+	to_find[nbr_chnks + 1] = ':';
+	to_find[nbr_chnks + 2] = '\0';
 	return (to_find);
 }
 
 
-void	print_big_units(char *str)
+void	print_big_units(char *str, int	nbr_chnks)
 {
-	int		nbr_chunks;
 	char	*to_find;
 	char	*dup;
 
-	nbr_chunks = nbr_chunks(str);
-	to_find = big_unit(nbr_chunks);
+	to_find = big_unit(nbr_chnks);
 	ft_strstr(str,to_find);
 	dup = ft_extract(str);
-	write(1, dup, ft_strlen(dup));	
+	write(1, dup, ft_strlen(dup));
 }

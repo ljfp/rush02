@@ -1,12 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_num.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jaires-r <jaires-r@student.42barcelon      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/27 15:10:08 by jaires-r          #+#    #+#             */
+/*   Updated: 2025/07/27 16:27:47 by jaires-r         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Rushheader.h"
 #include <fcntl.h>
 #include <stdlib.h>
 #include <unistd.h>
-
-char	*ft_extract(char *str);
-int chunks(char *str);
-void decompose(char digit1, char digit2, char digit3);
-void print_num(char *str);
-
 
 char	*ft_strstr(char *str, char *to_find)
 {
@@ -54,6 +61,6 @@ void print_num(char *str)
 
 int	main(void)
 {
-	chunks("123");
+	chunks("1230");
 	return (0);
 }
