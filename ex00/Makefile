@@ -12,7 +12,7 @@
 
 NAME    = rush-02
 CC      = cc
-CFLAGS  = -Wall -Wextra -Werror -g -fsanitize=address
+CFLAGS  = -Wall -Wextra -Werror -g
 SRCS_DIR= srcs
 SRCS    = $(wildcard $(SRCS_DIR)/*.c)
 OBJS    = $(patsubst $(SRCS_DIR)/%.c, %.o, $(SRCS))
