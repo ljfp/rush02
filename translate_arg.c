@@ -6,7 +6,7 @@
 /*   By: nponcin <nponcin@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 21:50:04 by nponcin           #+#    #+#             */
-/*   Updated: 2025/07/27 16:27:15 by jaires-r         ###   ########.fr       */
+/*   Updated: 2025/07/27 17:07:55 by nponcin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	chunks(char *str)
 	int		i;
 	int		len;
 	int		padding;
-	int		nbr_chnks;
+	int		idx;
 	char	padded_str[1024];
 
 	i = 0;
@@ -41,24 +41,24 @@ int	chunks(char *str)
 		padded_str[i] = '0';
 		i++;
 	}
-	i = 0;
-	while (i < 3 - padding)
+	idx = 0;
+	while (idx < len)
 	{
-		padded_str[padding + i] = str[i];
-		i++;
+		padded_str[padding + idx] = str[idx];
+		idx++;
 	}
 	len = len + padding;
-	i = 0;
-	while (i < len)
+	padded_str[len] = '\0';
+	idx = 0;
+	while (idx < len)
 	{
-		decompose(padded_str[i], padded_str[i + 1], padded_str[i + 2]);
-		if (i + 3 < len)
+		decompose(padded_str[idx], padded_str[idx + 1], padded_str[idx + 2]);
+		if (idx + 3 < len)
 		{
 			write(1, " ", 1);
-		/*	nbr_chnks = nbr_chunks(str + i);
-			print_big_units(str + i, nbr_chnks);*/
+			print_big_units(str + idx, idx / 3);
 		}
-		i += 3;
+		idx += 3;
 	}
 	write(1, "\n", 1);
 	return (0);
