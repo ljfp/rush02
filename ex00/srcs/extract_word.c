@@ -39,7 +39,8 @@ char	*ft_extract(char *str)
 	if (str == NULL)
 		return (NULL);
 	start = 0;
-	while ((str[start] >= '0' && str[start] <= '9') || str[start] == ' ' || str[start] == ':')
+	while ((str[start] >= '0' && str[start] <= '9')
+		|| str[start] == ' ' || str[start] == ':')
 	{
 		start++;
 	}
@@ -50,5 +51,5 @@ char	*ft_extract(char *str)
 	}
 	string_len = (end - start);
 	result = ft_strndup(&str[start], string_len);
-	return (result);	
+	return (result);
 }
