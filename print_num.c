@@ -27,7 +27,7 @@ char	*ft_strstr(char *str, char *to_find)
 		{
 			j++;
 		}
-		if (to_find[j] == '\0')
+		if ((to_find[j] == '\0') && (str[i + j] < '0' || str [i + j] > '9'))
 		{
 			return (&str[i]);
 		}
