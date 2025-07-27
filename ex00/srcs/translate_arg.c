@@ -61,6 +61,8 @@ int	chunks(char *str, char	*dict_name)
 	padding = (3 - (len % 3)) % 3;
 	pad_str = zero_pad(padding, str, len);
 	len += padding;
+	if (handle_zero_case(pad_str, len, dict_name))
+		return (0);
 	idx = 0;
 	while (idx < len)
 	{

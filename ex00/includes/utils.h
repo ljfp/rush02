@@ -20,5 +20,6 @@
 
 /* utils.c */
 int	ft_strlen(char *str);
+int	handle_zero_case(char *pad_str, int len, char *dict_name);
 
 #endif
