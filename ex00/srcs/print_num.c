@@ -48,6 +48,11 @@ void	print_num(char *str, char *dict_name)
 	char	*result;
 
 	fd = open(dict_name, O_RDONLY);
+	if ( fd < 0)
+	{
+		write(1, "Dict Error\n", 11);
+		exit(1);
+	}
 	read(fd, buffer, 691);
 	close(fd);
 	tmpres = ft_strstr(buffer, str);
