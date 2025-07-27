@@ -6,17 +6,16 @@
 /*   By: nponcin <nponcin@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 15:48:37 by nponcin           #+#    #+#             */
-/*   Updated: 2025/07/27 20:26:15 by lauferna         ###   ########.fr       */
+/*   Updated: 2025/07/27 20:59:54 by nponcin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RUSH02_H
 # define RUSH02_H
 
-#include <fcntl.h>
-#include <stdlib.h>
-#include <unistd.h>
-
+# include <fcntl.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 /* args.c */
 int		ft_check_args(int argc, char **argv);
