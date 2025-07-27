@@ -6,7 +6,7 @@
 #    By: nponcin <nponcin@student.42barcelona.      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/23 13:00:50 by nponcin           #+#    #+#              #
-#    Updated: 2025/07/27 20:17:22 by lauferna         ###   ########.fr        #
+#    Updated: 2025/07/27 20:42:26 by lauferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,9 +21,7 @@ RM      = rm -rf
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@echo "Compiling $(NAME)..."
 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
-	@echo "Compiling FINISHED"
 
 %.o: $(SRCS_DIR)/%.c
 	@$(CC) $(CFLAGS) -c $< -o $@
@@ -33,7 +31,6 @@ clean:
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "Cleaned!"
 
 re: fclean all
 
