@@ -6,7 +6,7 @@
 /*   By: jaires-r <jaires-r@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 21:11:51 by jaires-r          #+#    #+#             */
-/*   Updated: 2025/07/27 19:50:06 by nponcin          ###   ########.fr       */
+/*   Updated: 2025/07/27 21:16:08 by lauferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*big_unit(int num_zeros)
 {
 	int		i;
 	char	*to_find;
-	
+
 	to_find = (char *) malloc(sizeof(char) *(1 + num_zeros + 2));
 	if (to_find == NULL)
 		return (NULL);
@@ -35,8 +35,7 @@ char	*big_unit(int num_zeros)
 	return (to_find);
 }
 
-
-void	print_big_units(int	len, int idx, char *dict_name)
+void	print_big_units(int len, int idx, char *dict_name)
 {
 	char	*to_find;
 	int		num_zeros;
@@ -44,11 +43,11 @@ void	print_big_units(int	len, int idx, char *dict_name)
 	num_zeros = (len - (idx + 3));
 	if (num_zeros > 0 && num_zeros % 3 == 0)
 	{
-	to_find = big_unit(num_zeros);
+		to_find = big_unit(num_zeros);
 		if (to_find)
 		{
 			print_num(to_find, dict_name);
 			free(to_find);
-		}		
+		}
 	}
 }
