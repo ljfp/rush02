@@ -6,7 +6,7 @@
 /*   By: jaires-r <jaires-r@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 15:10:08 by jaires-r          #+#    #+#             */
-/*   Updated: 2025/07/27 21:06:01 by nponcin          ###   ########.fr       */
+/*   Updated: 2025/07/27 22:31:08 by lauferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	print_num(char *str, char *dict_name)
 	char	*result;
 
 	fd = open(dict_name, O_RDONLY);
-	if ( fd < 0)
+	if (fd < 0)
 	{
 		write(1, "Dict Error\n", 11);
 		exit(1);
