@@ -6,7 +6,7 @@
 /*   By: nponcin <nponcin@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 21:50:04 by nponcin           #+#    #+#             */
-/*   Updated: 2025/07/27 19:42:30 by nponcin          ###   ########.fr       */
+/*   Updated: 2025/07/27 20:33:55 by jaires-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,9 @@ int	chunks(char *str, char	*dict_name)
 		decompose(padded_str[idx], padded_str[idx + 1], padded_str[idx + 2], dict_name);
 		if ((idx + 3) < len)
 		{
-			write(1, " ", 1);
+			write (1, " ", 1);
 			print_big_units(len, idx, dict_name);
+			write (1, " ", 1);
 		}
 		idx += 3;
 	}
