@@ -6,7 +6,7 @@
 /*   By: nponcin <nponcin@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 21:50:04 by nponcin           #+#    #+#             */
-/*   Updated: 2025/07/27 20:33:55 by jaires-r         ###   ########.fr       */
+/*   Updated: 2025/07/27 21:06:13 by jaires-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,13 @@ int	ft_strlen(char *str)
 	while (str[i] != '\0')
 		i++;
 	return (i);
+}
+
+int	skip_zeros(char *padded_str)
+{
+	if (padded_str[0] == '0' && padded_str[1] == '0' && padded_str[2] == '0')
+		return (1);
+	return (0);
 }
 
 int	chunks(char *str, char	*dict_name)
@@ -50,11 +57,16 @@ int	chunks(char *str, char	*dict_name)
 	while (idx < len)
 	{
 		decompose(padded_str[idx], padded_str[idx + 1], padded_str[idx + 2], dict_name);
+		if (skip_zeros(&padded_str[idx]) == 1)
+		{
+			idx += 3;
+			continue ;
+		}
 		if ((idx + 3) < len)
 		{
-			write (1, " ", 1);
-			print_big_units(len, idx, dict_name);
-			write (1, " ", 1);
+				write (1, " ", 1);
+				print_big_units(len, idx, dict_name);
+				write (1, " ", 1);
 		}
 		idx += 3;
 	}
