@@ -6,7 +6,7 @@
 /*   By: nponcin <nponcin@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 15:48:37 by nponcin           #+#    #+#             */
-/*   Updated: 2025/07/27 20:59:54 by nponcin          ###   ########.fr       */
+/*   Updated: 2025/07/27 22:12:45 by lauferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <fcntl.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
 /* args.c */
 int		ft_check_args(int argc, char **argv);
@@ -43,4 +44,9 @@ int		nbr_chunks(char *str);
 char	*big_unit(int nbr_chnks);
 void	print_big_units(int len, int idx, char *dict_name);
 
+/* decompose_states.c */
+void	state1(char d1, char d2, char d3, char *dict_name);
+void	state2(char d2, char d3, char *dict_name);
+void	state3(char d2, char d3, char *dict_name);
+void	state4(char d3, char *dict_name);
 #endif
