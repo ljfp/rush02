@@ -39,13 +39,11 @@ char	*ft_strstr(char *str, char *to_find)
 
 void print_num(char *str)
 {
-	int i;
 	int fd;
 	char buffer[691];
 	char *tmpres;
 	char *result;
 	
-	i = 0;
 	fd = open("numbers.dict", O_RDONLY);
 	read(fd, buffer, 700);
 	close(fd);

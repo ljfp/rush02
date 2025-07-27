@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   read_entry.c                                       :+:      :+:    :+:   */
+/*   print_big_unit.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaires-r <jaires-r@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 21:11:51 by jaires-r          #+#    #+#             */
-/*   Updated: 2025/07/26 23:44:48 by jaires-r         ###   ########.fr       */
+/*   Updated: 2025/07/27 14:33:37 by nponcin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int		nbr_chunks(char *str)
 
 char	*big_unit(int nbr_chunks)
 {
-	int	i;
+	int		i;
 	char	*to_find;
 	
 	to_find = (char *) malloc((nbr_chunks + 3) * sizeof(char));
@@ -49,14 +49,13 @@ char	*big_unit(int nbr_chunks)
 
 void	print_big_units(char *str)
 {
-	int		nbr_chunks
-	char	*cstr;
+	int		nbr_chunks;
 	char	*to_find;
+	char	*dup;
 
-	cstr = str;
-	nbr_chunks = nbr_chunks(cstr);
+	nbr_chunks = nbr_chunks(str);
 	to_find = big_unit(nbr_chunks);
-	ft_strstr(cstr,to_find);
-	/*cut off function*/
-	write(1, /*cut string i.e'thousand'*/, ft_strlen(/*"thousand"*/)	
+	ft_strstr(str,to_find);
+	dup = ft_extract(str);
+	write(1, dup, ft_strlen(dup));	
 }

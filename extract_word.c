@@ -6,7 +6,7 @@
 /*   By: nponcin <nponcin@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 19:59:48 by nponcin           #+#    #+#             */
-/*   Updated: 2025/07/26 21:48:38 by nponcin          ###   ########.fr       */
+/*   Updated: 2025/07/27 12:51:52 by nponcin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,10 @@ char	*ft_extract(char *str)
 	int		string_len;
 	char	*result;
 
+	if (str == NULL)
+		return (NULL);
 	start = 0;
-	while ((str[start] >= '0' && str[start] <= '9') || str[start] == ' ' || str[start] == ':' )
+	while ((str[start] >= '0' && str[start] <= '9') || str[start] == ' ' || str[start] == ':')
 	{
 		start++;
 	}
