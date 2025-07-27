@@ -6,7 +6,7 @@
 /*   By: nponcin <nponcin@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 21:50:04 by nponcin           #+#    #+#             */
-/*   Updated: 2025/07/27 17:07:55 by nponcin          ###   ########.fr       */
+/*   Updated: 2025/07/27 17:16:53 by nponcin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	chunks(char *str)
 		if (idx + 3 < len)
 		{
 			write(1, " ", 1);
-			print_big_units(str + idx, idx / 3);
+			print_big_units(str + idx, (len - idx) / 3);
 		}
 		idx += 3;
 	}
