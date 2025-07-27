@@ -29,12 +29,12 @@ int	main(int argc, char **argv)
 	if(argc == 2)
 	{
 		dict_name="numbers.dict";
-		chunks(argv[1]);
+		chunks(argv[1], dict_name);
 	}
 	if(argc ==3)
 	{
-		dict_name=argv[1];
-		chunks(argv[2]);
+		dict_name = argv[1];
+		chunks(argv[2], dict_name);
 	}
 	return (0);
 }
