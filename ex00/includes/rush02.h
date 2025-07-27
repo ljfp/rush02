@@ -6,7 +6,7 @@
 /*   By: nponcin <nponcin@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 15:48:37 by nponcin           #+#    #+#             */
-/*   Updated: 2025/07/27 19:41:29 by nponcin          ###   ########.fr       */
+/*   Updated: 2025/07/27 20:26:15 by lauferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 /* args.c */
 int		ft_check_args(int argc, char **argv);
 int		ft_return_len(int argc, char **argv);
-char	*ft_convert_args(int argc, char **argv);
 
 /* extract_word.c */
 
