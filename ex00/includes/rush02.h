@@ -6,7 +6,7 @@
 /*   By: nponcin <nponcin@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 15:48:37 by nponcin           #+#    #+#             */
-/*   Updated: 2025/07/27 17:42:52 by lauferna         ###   ########.fr       */
+/*   Updated: 2025/07/27 18:32:31 by jaires-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ void	decompose(char d1, char d2, char d3, char *dict_name);
 
 int		nbr_chunks(char *str);
 char	*big_unit(int nbr_chnks);
-void	print_big_units(char *str, int nbr_chnks);
+void	print_big_units(int nbr_chnks, char *dict_name);
 
 #endif

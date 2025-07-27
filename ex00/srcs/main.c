@@ -6,7 +6,7 @@
 /*   By: egalindo <egalindo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 11:17:05 by egalindo          #+#    #+#             */
-/*   Updated: 2025/07/27 17:42:04 by lauferna         ###   ########.fr       */
+/*   Updated: 2025/07/27 17:56:40 by jaires-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	main(int argc, char **argv)
 		dict_name="numbers.dict";
 		chunks(argv[1], dict_name);
 	}
-	if(argc ==3)
+	if(argc == 3)
 	{
 		dict_name = argv[1];
 		chunks(argv[2], dict_name);
