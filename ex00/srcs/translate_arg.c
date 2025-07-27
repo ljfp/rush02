@@ -22,7 +22,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-int	chunks(char *str)
+int	chunks(char *str, char	*dict_name)
 {
 	int		i;
 	int		len;
@@ -49,7 +49,7 @@ int	chunks(char *str)
 	idx = 0;
 	while (idx < len)
 	{
-		decompose(padded_str[idx], padded_str[idx + 1], padded_str[idx + 2]);
+		decompose(padded_str[idx], padded_str[idx + 1], padded_str[idx + 2], dict_name);
 		if (idx + 3 < len)
 		{
 			write(1, " ", 1);
@@ -61,7 +61,7 @@ int	chunks(char *str)
 	return (0);
 }
 
-void decompose(char d1, char d2, char d3)
+void decompose(char d1, char d2, char d3, char *dict_name)
 {
 	char	temp[4];
 
@@ -69,9 +69,9 @@ void decompose(char d1, char d2, char d3)
 	{
 		temp[0] = d1;
 		temp[1] = '\0';
-		print_num(temp);
+		print_num(temp, dict_name);
 		write(1, " ", 1);
-		print_num("100");
+		print_num("100", dict_name);
 		if (d2 != '0' || d3 != '0')
 			write(1, " and ", 5);
 	}
@@ -80,7 +80,7 @@ void decompose(char d1, char d2, char d3)
 		temp[0] = d2;
 		temp[1] = d3;
 		temp[2] = '\0';
-		print_num(temp);
+		print_num(temp, dict_name);
 	}
 	else
 	{
@@ -89,7 +89,7 @@ void decompose(char d1, char d2, char d3)
 			temp[0] = d2;
 			temp[1] = '0';
 			temp[2] = '\0';
-			print_num(temp);
+			print_num(temp, dict_name);
 				if (d3 != '0')
 					write(1, "-", 1);
 		}
@@ -97,7 +97,7 @@ void decompose(char d1, char d2, char d3)
 		{
 			temp[0] = d3;
 			temp[1] = '\0';
-			print_num(temp);
+			print_num(temp, dict_name);
 		}
 	}
 	

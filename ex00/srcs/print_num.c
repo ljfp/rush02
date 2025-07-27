@@ -41,14 +41,14 @@ char	*ft_strstr(char *str, char *to_find)
 }
 
 
-void print_num(char *str)
+void print_num(char *str, char *dict_name)
 {
 	int fd;
 	char buffer[691];
 	char *tmpres;
 	char *result;
 	
-	fd = open("numbers.dict", O_RDONLY);
+	fd = open(dict_name, O_RDONLY);
 	read(fd, buffer, 700);
 	close(fd);
 	tmpres = ft_strstr(buffer, str);

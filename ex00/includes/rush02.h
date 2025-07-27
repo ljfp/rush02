@@ -31,13 +31,13 @@ char	*ft_extract(char *str);
 /* print_num.c */
 
 char	*ft_strstr(char *str, char *to_find);
-void	print_num(char *str);
+void	print_num(char *str, char *dict_name);
 
 /* translate_arg.c */
 
 int		ft_strlen(char *str);
-int		chunks(char *str);
-void	decompose(char d1, char d2, char d3);
+int		chunks(char *str, char *dict_name);
+void	decompose(char d1, char d2, char d3, char *dict_name);
 
 /* print_big_unit.c */
 
