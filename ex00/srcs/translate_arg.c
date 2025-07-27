@@ -56,22 +56,33 @@ int	chunks(char *str, char	*dict_name)
 	int		padding;
 	int		idx;
 	char	*pad_str;
+	int		has_big_unit;
+	int		is_last_chunk;
 
 	len = ft_strlen(str);
 	padding = (3 - (len % 3)) % 3;
 	pad_str = zero_pad(padding, str, len);
 	len += padding;
 	idx = 0;
+	has_big_unit = 0;
 	while (idx < len)
 	{
-		decompose(pad_str[idx], pad_str[idx + 1], pad_str[idx + 2], dict_name);
 		if (skip_zeros(&pad_str[idx]) == 1)
 		{
 			idx += 3;
 			continue ;
 		}
+		is_last_chunk = (idx == (len - 3));
+		if (has_big_unit && is_last_chunk)
+		{
+			write(1, "and ", 4);
+		}
+		decompose(pad_str[idx], pad_str[idx + 1], pad_str[idx + 2], dict_name);
 		if ((idx + 3) < len)
+		{
 			space_big_u(len, idx, dict_name);
+			has_big_unit = 1;
+		}
 		idx += 3;
 	}
 	write(1, "\n", 1);
