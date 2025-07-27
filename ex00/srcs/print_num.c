@@ -6,7 +6,7 @@
 /*   By: jaires-r <jaires-r@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 15:10:08 by jaires-r          #+#    #+#             */
-/*   Updated: 2025/07/27 20:21:25 by lauferna         ###   ########.fr       */
+/*   Updated: 2025/07/27 21:06:01 by nponcin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,13 @@ char	*ft_strstr(char *str, char *to_find)
 	return (0);
 }
 
-
-void print_num(char *str, char *dict_name)
+void	print_num(char *str, char *dict_name)
 {
-	int fd;
-	char buffer[691];
-	char *tmpres;
-	char *result;
-	
+	int		fd;
+	char	buffer[691];
+	char	*tmpres;
+	char	*result;
+
 	fd = open(dict_name, O_RDONLY);
 	read(fd, buffer, 691);
 	close(fd);
