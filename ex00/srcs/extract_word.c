@@ -6,11 +6,10 @@
 /*   By: nponcin <nponcin@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 19:59:48 by nponcin           #+#    #+#             */
-/*   Updated: 2025/07/27 16:16:06 by jaires-r         ###   ########.fr       */
+/*   Updated: 2025/07/27 17:42:09 by lauferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "Rushheader.h"
-#include <stdlib.h>
+#include "../includes/rush02.h"
 
 char	*ft_strndup(char *src, int n)
 {

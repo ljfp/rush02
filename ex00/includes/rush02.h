@@ -1,17 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Rushheader.h                                       :+:      :+:    :+:   */
+/*   rush02.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nponcin <nponcin@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 15:48:37 by nponcin           #+#    #+#             */
-/*   Updated: 2025/07/27 16:22:59 by jaires-r         ###   ########.fr       */
+/*   Updated: 2025/07/27 17:42:52 by lauferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RUSHHEADER_H
-# define RUSHHEADER_H
+#ifndef RUSH02_H
+# define RUSH02_H
+
+#include <fcntl.h>
+#include <stdlib.h>
+#include <unistd.h>
+
 
 /* args.c */
 int		ft_check_args(int argc, char **argv);

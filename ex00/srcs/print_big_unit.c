@@ -6,14 +6,14 @@
 /*   By: jaires-r <jaires-r@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 21:11:51 by jaires-r          #+#    #+#             */
-/*   Updated: 2025/07/27 16:22:50 by jaires-r         ###   ########.fr       */
+/*   Updated: 2025/07/27 17:41:22 by lauferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
 #include <fcntl.h>
-#include "Rushheader.h"
+#include "../includes/rush02.h"
 
 int		nbr_chunks(char *str)
 {

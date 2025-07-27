@@ -6,13 +6,11 @@
 /*   By: egalindo <egalindo@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 11:17:05 by egalindo          #+#    #+#             */
-/*   Updated: 2025/07/27 16:07:16 by jaires-r         ###   ########.fr       */
+/*   Updated: 2025/07/27 17:42:04 by lauferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include "Rushheader.h"
+#include "../includes/rush02.h"
 
 int		ft_check_args(int argc, char **argv);
 char	*ft_convert_args(int argc, char **argv);
@@ -31,7 +29,7 @@ int	main(int argc, char **argv)
 	if(argc == 2)
 	{
 		dict_name="numbers.dict";
-		chunks(argv[1];
+		chunks(argv[1]);
 	}
 	if(argc ==3)
 	{

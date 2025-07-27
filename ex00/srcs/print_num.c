@@ -6,14 +6,11 @@
 /*   By: jaires-r <jaires-r@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 15:10:08 by jaires-r          #+#    #+#             */
-/*   Updated: 2025/07/27 16:27:47 by jaires-r         ###   ########.fr       */
+/*   Updated: 2025/07/27 17:47:06 by lauferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Rushheader.h"
-#include <fcntl.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include "../includes/rush02.h"
 
 char	*ft_strstr(char *str, char *to_find)
 {
@@ -57,10 +54,4 @@ void print_num(char *str)
 	tmpres = ft_strstr(buffer, str);
 	result = ft_extract(tmpres);
 	write (1, result, 20);
-}
-
-int	main(void)
-{
-	chunks("1230");
-	return (0);
 }

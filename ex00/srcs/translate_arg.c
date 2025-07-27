@@ -6,14 +6,11 @@
 /*   By: nponcin <nponcin@student.42barcelona.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 21:50:04 by nponcin           #+#    #+#             */
-/*   Updated: 2025/07/27 17:16:53 by nponcin          ###   ########.fr       */
+/*   Updated: 2025/07/27 17:43:08 by lauferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include "Rushheader.h" 
+#include "../includes/rush02.h" 
 
 int	ft_strlen(char *str)
 {
